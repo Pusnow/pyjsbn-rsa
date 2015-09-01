@@ -30,12 +30,32 @@ Paste rsa.n to demo's *Modulus (hex)* and press encryt. (without "0x" and "L") A
     
 
 ##Methods
-You can use man methods of rsa.js and rsa2.js
+You can use main methods of rsa.js and rsa2.js
 
 ###SetPublic
-Set the public key fields N and e from hex strings
+Set the public key fields N and e from hex strings.
+
     >>rsa.SetPublic(n,e)
 
 ###SetPrivate
-Set the private key fields N, e, and d from hex strings
+Set the private key fields N, e, and d from hex strings.
+
 	>>rsa.SetPrivate(n,e,d)
+
+###SetPrivateEx
+Set the private key fields N, e, d and CRT params from hex strings.
+
+	>>rsa.SetPrivateEx(n,e,d,p,q,dp,dq,c)
+###Encrypt
+Return the PKCS#1 RSA encryption of "text" as an even-length hex string. You should do ```SetPublic```, ```SetPrivate```, ```SetPrivateEx``` or ```Generate``` first.
+
+    >>rsa.Encrypt(text)
+
+###Decrypt
+Return the PKCS#1 RSA decryption of "ctext". "ctext" is an even-length hex string and the output is a plain string. You should do ```SetPrivate```, ```SetPrivateEx``` or ```Generate``` first.
+    >>rsa.Decrypt(ctext)
+
+###Generate
+Generate a new random private key B bits long, using public expt E
+
+	>>rsa.Generate(b,e)
