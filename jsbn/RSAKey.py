@@ -22,7 +22,7 @@ class RSAKey :
 			self.n = int(N,16)
 			self.e = int(E,16)
 		else :
-			pass
+			raise ValueError 
 
 
 	#Return the PKCS#1 RSA encryption of "text" as an even-length hex string
@@ -42,7 +42,7 @@ class RSAKey :
 			self.e = int(E,16)
 			self.d = int(D,16)
 		else :
-			pass
+			raise ValueError 
 
 
 	#Set the private key fields N, e, d and CRT params from hex strings
@@ -58,7 +58,7 @@ class RSAKey :
 			self.coeff = int(C,16)
 
 		else: 
-			pass
+			raise ValueError 
 
 	# Return the PKCS#1 RSA decryption of "ctext".
 	# "ctext" is an even-length hex string and the output is a plain string.
