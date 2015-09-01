@@ -1,5 +1,5 @@
 # -*- coding: utf8 -*-
-from rsa import key, encrypt, decrypt, PublicKey, PrivateKey, newkeys
+from rsa import encrypt, decrypt, PublicKey, PrivateKey, newkeys
 
 
 class RSAKey :
