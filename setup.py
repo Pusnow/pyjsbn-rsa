@@ -12,7 +12,7 @@ with open(path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
 
 
 setup(name='pyjsbn-rsa',
-      version='0.1',
+      version='0.2',
       description='Python RSA module compatible with jsbn.js',
       long_description = "",
       author='Wonsup Yoon',
