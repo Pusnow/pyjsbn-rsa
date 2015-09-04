@@ -47,12 +47,12 @@ Set the private key fields N, e, d and CRT params from hex strings.
 
 	>>rsa.setPrivateEx(n,e,d,p,q,dp,dq,c)
 ###encrypt
-Return the PKCS#1 RSA encryption of "text" as an even-length hex string. You should do ```SetPublic```, ```SetPrivate```, ```SetPrivateEx``` or ```Generate``` first.
+Return the PKCS#1 RSA encryption of "text" as an even-length hex string. You should do ```setPublic```, ```setPrivate```, ```setPrivateEx``` or ```generate``` first.
 
-    >>rsa.Encrypt(text)
+    >>rsa.encrypt(text)
 
 ###decrypt
-Return the PKCS#1 RSA decryption of "ctext". "ctext" is an even-length hex string and the output is a plain string. You should do ```SetPrivate```, ```SetPrivateEx``` or ```Generate``` first.
+Return the PKCS#1 RSA decryption of "ctext". "ctext" is an even-length hex string and the output is a plain string. You should do ```setPrivate```, ```setPrivateEx``` or ```generate``` first.
     >>rsa.decrypt(ctext)
 
 ###generate
