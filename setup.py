@@ -1,15 +1,10 @@
 #!/usr/bin/env python
-
-from setuptools import setup
-
-from codecs import open
-from os import path
+from distutils.core import setup
 
 setup(
     name='pyjsbn-rsa',
-    version='0.2.2',
-    description='Python RSA module compatible with jsbn.js',
-    long_description="",
+    version='0.3',
+    description='Python RSA module compatible with jsbn.j',
     author='Wonsup Yoon',
     author_email='pusnow@yonsei.ac.kr',
     license='BSD',
@@ -27,7 +22,6 @@ setup(
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
     ],
-    ],
+    packages=['jsbn'],
     keywords='jsbn rsa RSAKey',
-    install_requires=['rsa'],
-    packages=["jsbn"], )
+    install_requires=['rsa'])
