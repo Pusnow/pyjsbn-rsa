@@ -1,8 +1,8 @@
-#pyjsbn-rsa
+# pyjsbn-rsa
 Python RSA module compatible with [jsbn.js](https://github.com/jasondavies/jsbn).
 
 
-##Installation
+## Installation
 
 pyjsbn-rsa is available via PyPI
 
@@ -12,7 +12,7 @@ via setup.py
 
 	python setup.py install
 	
-##Basic Use
+## Basic Use
 You can test module with [jsbn's RSA Encryption Demo](http://www-cs-students.stanford.edu/~tjw/jsbn/rsa.html)
 
     >>from jsbn import RSAKey
@@ -29,33 +29,33 @@ Paste rsa.n to demo's *Modulus (hex)* and press encryt. (without "0x" and "L") A
     'Hello World!'
     
 
-##Methods
+## Methods
 You can use main methods of rsa.js and rsa2.js
 
-###setPublic
+### setPublic
 Set the public key fields N and e from hex strings.
 
     >>rsa.setPublic(n,e)
 
-###setPrivate
+### setPrivate
 Set the private key fields N, e, and d from hex strings.
 
 	>>rsa.setPrivate(n,e,d)
 
-###setPrivateEx
+### setPrivateEx
 Set the private key fields N, e, d and CRT params from hex strings.
 
 	>>rsa.setPrivateEx(n,e,d,p,q,dp,dq,c)
-###encrypt
+### encrypt
 Return the PKCS#1 RSA encryption of "text" as an even-length hex string. You should do ```setPublic```, ```setPrivate```, ```setPrivateEx``` or ```generate``` first.
 
     >>rsa.encrypt(text)
 
-###decrypt
+### decrypt
 Return the PKCS#1 RSA decryption of "ctext". "ctext" is an even-length hex string and the output is a plain string. You should do ```setPrivate```, ```setPrivateEx``` or ```generate``` first.
     >>rsa.decrypt(ctext)
 
-###generate
+### generate
 Generate a new random private key B bits long, using public expt E
 
 	>>rsa.generate(b,e)
