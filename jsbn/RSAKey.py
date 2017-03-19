@@ -33,10 +33,9 @@ class RSAKey:
         """
         if text is None:
             return None
-
         pubkey = rsa.PublicKey(self.n, self.e)
-        ciphertext = rsa.encrypt(text, pubkey)
-        return ''.join([("%x" % ord(x)).zfill(2) for x in ciphertext])
+        ciphertext = rsa.encrypt(bytes(text, encoding="utf8"), pubkey)
+        return ''.join([("%x" % x).zfill(2) for x in ciphertext])
 
     def setPrivate(self, N, E, D):
         """
@@ -72,10 +71,11 @@ class RSAKey:
         "ctext" is an even-length hex string and the output is a plain string.
         """
 
-        ctext = ''.join([chr(int(x, 16)) for x in re.findall(r'\w\w', ctext)])
+        ctext = bytearray([int(x, 16) for x in re.findall(r'\w\w', ctext)])
         prikey = rsa.PrivateKey(self.n, self.e, self.d, self.p, self.q,
                                 self.dmp1, self.dmq1, self.coeff)
-        return rsa.decrypt(ctext, prikey)
+
+        return rsa.decrypt(ctext, prikey).decode("utf-8")
 
     def generate(self, B, E):
         """
