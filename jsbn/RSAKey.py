@@ -1,6 +1,7 @@
 # -*- coding: utf8 -*-
 import rsa
 import re
+import six
 
 
 class RSAKey:
@@ -34,8 +35,13 @@ class RSAKey:
         if text is None:
             return None
         pubkey = rsa.PublicKey(self.n, self.e)
-        ciphertext = rsa.encrypt(bytes(text, encoding="utf8"), pubkey)
-        return ''.join([("%x" % x).zfill(2) for x in ciphertext])
+        if six.PY3:
+            text = bytes(text, encoding="utf8")
+        ciphertext = rsa.encrypt(text, pubkey)
+        if six.PY3:
+            return ''.join([("%x" % x).zfill(2) for x in ciphertext])
+        else:
+            return ''.join([("%x" % ord(x)).zfill(2) for x in ciphertext])
 
     def setPrivate(self, N, E, D):
         """
