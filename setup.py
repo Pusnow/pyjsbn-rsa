@@ -4,7 +4,7 @@ from distutils.core import setup
 setup(
     name='pyjsbn-rsa',
     version='0.3',
-    description='Python RSA module compatible with jsbn.j',
+    description='Python RSA module compatible with jsbn.js',
     author='Wonsup Yoon',
     author_email='pusnow@yonsei.ac.kr',
     license='BSD',
