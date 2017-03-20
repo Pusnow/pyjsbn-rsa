@@ -54,6 +54,7 @@ Return the PKCS#1 RSA encryption of "text" as an even-length hex string. You sho
 
 ### decrypt
 Return the PKCS#1 RSA decryption of "ctext". "ctext" is an even-length hex string and the output is a plain string. You should do ```setPrivate```, ```setPrivateEx``` or ```generate``` first.
+
     >>rsa.decrypt(ctext)
 
 ### generate
