@@ -35,8 +35,7 @@ class RSAKey:
         if text is None:
             return None
         pubkey = rsa.PublicKey(self.n, self.e)
-        if six.PY3:
-            text = bytes(text, encoding="utf8")
+        text = text.encode("utf8")
         ciphertext = rsa.encrypt(text, pubkey)
         if six.PY3:
             return ''.join([("%x" % x).zfill(2) for x in ciphertext])

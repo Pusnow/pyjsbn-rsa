@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
 """
 Test for RSA
 """
 
+from __future__ import unicode_literals
 from jsbn import RSAKey
 import unittest
 
