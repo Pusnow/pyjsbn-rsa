@@ -1,4 +1,6 @@
 # pyjsbn-rsa
+[![Build Status](https://travis-ci.org/Pusnow/pyjsbn-rsa.svg?branch=master)](https://travis-ci.org/Pusnow/pyjsbn-rsa)
+
 Python RSA module compatible with [jsbn.js](https://github.com/jasondavies/jsbn).
 
 
