@@ -9,7 +9,7 @@ python:
 - '3.7-dev'
 - 'pypy'
 - 'pypy3'
-- 'pypy-5.3.1"
+- 'pypy-5.3.1'
 install:
 - pip install -r requirements.txt
 - python setup.py install
