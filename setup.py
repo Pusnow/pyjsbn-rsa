@@ -1,9 +1,14 @@
 #!/usr/bin/env python
 from distutils.core import setup
 
+from os import path
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
     name='pyjsbn-rsa',
-    version='0.4',
+    version='0.4.1',
     description='Python RSA module compatible with jsbn.js',
     author='Wonsup Yoon',
     author_email='pusnow@yonsei.ac.kr',
@@ -19,4 +24,7 @@ setup(
     ],
     packages=['jsbn'],
     keywords='jsbn rsa RSAKey',
-    install_requires=['rsa'])
+    install_requires=['rsa'],
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+)
