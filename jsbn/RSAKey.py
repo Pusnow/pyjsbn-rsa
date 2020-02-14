@@ -77,8 +77,7 @@ class RSAKey:
         """
 
         ctext = bytearray([int(x, 16) for x in re.findall(r'\w\w', ctext)])
-        prikey = rsa.PrivateKey(self.n, self.e, self.d, self.p, self.q,
-                                self.dmp1, self.dmq1, self.coeff)
+        prikey = rsa.PrivateKey(self.n, self.e, self.d, self.p, self.q)
 
         return rsa.decrypt(ctext, prikey).decode("utf-8")
 
