@@ -21,6 +21,7 @@ deploy:
   user: pusnow
   password:
     secure: T+gi/QJMvWFuw3nlDeTPDfQAvDT79CwaGtMP9R+UgNx7HItaBY0VNv4IZmWDqouaINKr/NWHF3cxYtNZrTqmLYOTMmc94aOgSEs+S+D/6GddMhW1yFxyZH1/PYPDTnfXzy0XdScEA/DMHb3fwrP2+GI/Brz1+0oVrhpWDPvIwVZwKL95J2PhyERzHrx82w3QMQTAzaYepduknSbORUruvfGdNxoTlW5gdhrIRJD/tv8AKUPkLCIV7SJHtunb7uBIsrWDb/XIxFD3XNLQ0JxdfmepoihTegiPEPutrl/95hbdBvOcebLcAPokL4Czyz1okYQF1cGKnsUG8Z0BXFVF8/VxYIJoN+kpX1rSiymeATYtYb/SIonrJeTISTS+WnBcYFhypLgrOF053l/dIug/kxiG5FHoD0nh3JHbLlWbTiO1R0IbC0i5pUvf5S6vRR47dTb66i8e71bZ90zSiLNynXwLl8XxAxzMAYZ4aJCINWwFF9WX9BQ/PkTWpgVmzgV516T1sJe6R2weYEktEKpAPJmbjaboZOdHxNpih/jlHFP5DhsSh7cnofxcazA2Zlu49PJQ+asLEoi+Z6MT6ZheOZw2OZ5QvqAlOD9P32Zbg4KS7DvC5yvRuizd2YUwBYqm4oVdBjQoNtahG5gb3xVUsUi1QJKosEXlrIQqcji80ok=
+  skip_existing: true
   on:
     distributions: sdist bdist_wheel
     repo: Pusnow/pyjsbn-rsa
