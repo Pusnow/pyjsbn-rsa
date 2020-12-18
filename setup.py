@@ -8,19 +8,20 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='pyjsbn-rsa',
-    version='0.4.1',
+    version='0.4.2',
     description='Python RSA module compatible with jsbn.js',
     author='Wonsup Yoon',
-    author_email='pusnow@yonsei.ac.kr',
+    author_email='pusnow@me.com',
     license='BSD',
     url='https://github.com/Pusnow/pyjsbn-rsa',
     classifiers=[
         'Development Status :: 3 - Alpha', 'Intended Audience :: Developers',
         'Topic :: Security :: Cryptography',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6'
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
     packages=['jsbn'],
     keywords='jsbn rsa RSAKey',
